@@ -1,0 +1,54 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, minimum-scale=1, maximum-scale=1" name="viewport" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.css.map" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ราคาทองวันนี้ - ห้างทองน่ำเชียง namchiang</title>
+  </head>
+  <body>
+    <section class="vegas-container" id="banner">
+      <div class="container">
+        <div class="logo">
+          <img class="gt-logo" src="https://www.namchiang.com/wp-content/uploads/2019/04/gtlogo.png" />
+          <img class="nc-logo" src="https://www.namchiang.com/wp-content/uploads/2019/04/cropped-NcLogo.png" />
+        </div>
+        <div class="contents">
+          <h1>ราคาทองวันนี้</h1>
+          <h3>อัพเดทเมื่อวันที่ <span class="update">2021-12-25 09:38:08</span></h3>
+          <p>000</p>
+          <p>เปลี่ยนแปลงรวม <span>000</span></p>
+          <h2>ทองแท่งรับซื้อ <span>00000</span></h2>
+          <h2>ทองแท่งขายออก <span>00000</span></h2>
+          <h2>ทองรูปพรรณรับซื้อ <span>00000</span></h2>
+        </div>
+        <div class="footer">
+          <p>ดูราคาทองย้อนหลังได้ที่ <a href="https://www.namchiang.com/">namchiang.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.5.4/vegas.min.js.map"></script>
+    <script>
+      jQuery(document).ready(function () {
+        $("#banner").vegas({
+          shuffle: true,
+          transitionDuration: 2000,
+          animation: "kenburns",
+          slides: [
+            { src: "img/home-bg.jpg" },
+            { src: "img/01.jpg" },
+            { src: "img/02.jpg" },
+            { src: "img/03.jpg" },
+            { src: "img/04.jpg" },
+            { src: "img/05.jpg" },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
