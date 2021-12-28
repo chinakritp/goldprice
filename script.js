@@ -36,12 +36,27 @@ jQuery(document).ready(function () {
 
 function update_gold_data(){
   var currentTime = new Date();
-  jQuery.get('https://www.namchiang.com/GoldPriceToday.xml?currTime='+currentTime, function(data){
-    jQuery('#date').text(jQuery(data).find('update').text());
-    // jQuery('#buychange').text(jQuery(data).find('buypricechg').text());
-    // jQuery('#buy').text(jQuery(data).find('buyprice').text());
-    // jQuery('#sale').text(jQuery(data).find('saleprice').text());
-  });
+  // jQuery.get('https://www.namchiang.com/GoldPriceToday.xml?currTime='+currentTime, function(data){
+  //   jQuery('#date').text(jQuery(data).find('update').text());
+  //   // jQuery('#buychange').text(jQuery(data).find('buypricechg').text());
+  //   // jQuery('#buy').text(jQuery(data).find('buyprice').text());
+  //   // jQuery('#sale').text(jQuery(data).find('saleprice').text());
+  // });
+  jQuery.ajax({
+    url: "https://www.namchiang.com/GoldPriceToday.xml?currTime="+currentTime,
+    type: "GET",
+    crossDomain: true,
+    headers: {
+      "Access-Control-Allow-Origin":"*"
+    }
+  }).done(
+    function(data){
+      jQuery('#date').text(jQuery(data).find('update').text());
+      // jQuery('#buychange').text(jQuery(data).find('buypricechg').text());
+      // jQuery('#buy').text(jQuery(data).find('buyprice').text());
+      // jQuery('#sale').text(jQuery(data).find('saleprice').text());
+    }
+  )
 }
 
 // function run_changed_number(){
