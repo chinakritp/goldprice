@@ -47,7 +47,7 @@ function update_gold_data(){
     type: "GET",
     crossDomain: true,
     headers: {
-      "Access-Control-Allow-Origin":"*"
+      "Access-Control-Allow-Origin": "namchiang.com"
     }
   }).done(
     function(data){
