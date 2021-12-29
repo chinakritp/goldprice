@@ -21,7 +21,7 @@ body {
   flex-basis: 45%;
 }
 .slider-container {
-  height: 100vh;
+  height: 100%;
   flex-basis: 55%;
   padding: 1vmin 1vmin 1vmin 0;
 
