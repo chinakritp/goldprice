@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;600&display=swap');
 
 * {
   box-sizing: border-box;
@@ -9,68 +9,88 @@ body {
 }
 
 .container {
-  align-items: center;
-  background: #333;
+  align-items: end;
+  background: rgb(34,12,12);
+  background: linear-gradient(0deg, rgba(34,12,12,1) 0%, rgba(137,27,26,1) 35%, rgba(137,27,26,1) 100%);
   display: flex;
   flex-direction: row;
   height: 100vh;
+  position: relative;
 }
 .main-content {
-  flex-basis: 30%;
+  flex-basis: 45%;
 }
-.vegas-container {
-  flex-basis: 70%;
+.slider-container {
+  height: 100vh;
+  flex-basis: 55%;
+  padding: 1vmin 1vmin 1vmin 0;
+
 }
 
 .logo {
   text-align: center;
 }
-.logo > img {
-  max-width: 150px;
-  width: 10vw;
+.logo .nc-logo {
+  max-width: 1490px;
+  width: 90%;
 }
 
 h1 {
-  color: #fff;
-  font-size: 3vw;
-  margin: 1.5vw 0 1vw;
+  color: #e2ae41;
+  font-size: 8vmin;
+  font-weight: 300;
+  line-height: 1em;
+  margin: 2vmin 0 0;
   text-align: center;
 }
-.gold-content dl {
-  background: #d3a633;
-  padding: 2vw 3vw;
+
+.gold-price {
+  background: url(./img/gold-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #891b1a;
+  margin: 3vmin 3vmin 0;
+  padding: 2vmin 3vmin;
+  position: relative;
+  width: calc(100% - 6vmin);
 }
-.gold-content dt {
-  background: #fff;
-  border-radius: 50px;
-  display: inline-block;
-  font-size: 1vw;
-  padding: 0.2vw 1.2vw;
+
+.gold-price td {
+  font-size: 9vmin;
+  line-height: 1em;
+  padding: 2vmin 0;
+  width: 50%;
 }
-.gold-content dd {
-  color: #fff;
-  font-size: 6vw;
-  font-weight: 400;
-  line-height: 1;
-  margin-bottom: 1vw;
+.gold-price tr:last-child td {
+  font-size: 4vmin;
+  vertical-align: top;
+}
+
+.gold-price tr td:last-child {
+  font-size: 11vmin;
   text-align: right;
-}
-.gold-content dd:last-child {
-  margin-bottom: 0;
 }
 
 .footer {
-  bottom: 0;
-  color: #fff;
-  font-size: 1vw;
-  padding: 1vw 1.5vw;
-  position: absolute;
+  color: #e2ae41;
+  font-size: 3vmin;
+  line-height: 1em;
+  padding: 4vmin 3vmin;
+  position: relative;
 }
-.footer > p {
+.footer p {
   margin: 0;
 }
 .footer a {
-  color: #eee;
+  color: #e2ae41;
+  text-decoration: none;
+}
+.footer .gt-logo {
+  bottom: 4vmin;
+  position: absolute;
+  right: 3vmin;
+  width: 7vmin;
 }
 
 @media (orientation: portrait) {
@@ -81,29 +101,46 @@ h1 {
   .main-content {
     flex-basis: 40%;
   }
-  .vegas-container {
+  .slider-container {
     flex-basis: 60%;
+    padding: 0;
   }
+
   .logo {
-    left: 2vw;
+    left: 50%;
     position: fixed;
-    top: 1vh;
+    top: 4vmin;
+    transform: translateX(-50%);
+    width: 100%;
     z-index: 99;
   }
+  .logo .nc-logo {
+    width: 65%;
+  }
+
   h1 {
-    font-size: 8vw;
-    margin: 1vw 0;
+    margin: 4vmin 0;
   }
-  .gold-content dl {
-    padding: 2vw 25vw;
+
+  .gold-price {
+    margin: 3vmin 5vmin 0;
+    padding: 4vmin 7vmin;
+    width: calc(100% - 10vmin);
   }
-  .gold-content dt {
-    font-size: 2vw;
+  .gold-price td {
+    padding: 1vmin 0;
   }
-  .gold-content dd {
-    font-size: 10vw;
-  }
+
   .footer {
-    font-size: 2vw;
+    padding: 4vmin 5vmin;
+  }
+  .footer .gt-logo {
+    right: 5vmin;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 991px) {
+  .logo .nc-logo {
+    width: 70%;
   }
 }
