@@ -1,5 +1,5 @@
 jQuery(document).ready(function () {
-  update_gold_data();
+  // update_gold_data();
 
   $("#banner").vegas({
     shuffle: true,
