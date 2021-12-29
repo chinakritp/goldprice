@@ -143,4 +143,7 @@ h1 {
   .logo .nc-logo {
     width: 70%;
   }
+  .gold-price td {
+    padding: 0.5vmin 0;
+  }
 }
